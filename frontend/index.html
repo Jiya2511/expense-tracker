@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Expense Tracker</h2>
+
+<!-- Tabs -->
+<div class="tabs">
+    <button onclick="showTab('add')"> Add Expense</button>
+    <button onclick="showTab('view')">View Expenses</button>
+    <button onclick="logout()"> Logout</button>
+</div>
+
+<!-- ADD EXPENSE TAB -->
+<div id="addTab" class="tab">
+    <input type="text" id="title" placeholder="Expense Title">
+    <input type="number" id="amount" placeholder="Amount">
+    <input type="date" id="date">
+    <select id="category">
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Shopping</option>
+        <option>Other</option>
+    </select>
+
+    <button class="primary" onclick="addExpense()">Add Expense</button>
+</div>
+
+<!-- VIEW EXPENSE TAB -->
+<div id="viewTab" class="tab" style="display:none">
+    <h3>Your Expenses</h3>
+    <ul id="expenseList"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
